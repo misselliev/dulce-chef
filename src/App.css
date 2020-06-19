@@ -1,6 +1,6 @@
 .App {
   min-height: 100vh;
-  background-image: linear-gradient( 177.9deg, rgba(255, 228, 254, 1) 5.3%, rgba(255, 228, 254, 1) 5.3%, rgba(188, 132, 173, 1) 94.7%);
+  background-image: linear-gradient(rgba(255, 228, 254, 1) 0%, rgba(188, 132, 173, 1) 100%);
 }
 
 .search-form {
