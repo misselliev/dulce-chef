@@ -1,24 +1,27 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {
+  Card, Header, Image,
+} from 'semantic-ui-react';
 
 const Recipe = ({
   title, calories, image, ingredients, link,
 }) => (
-  <div>
-    <h1>{title}</h1>
-    <p>
+  <Card color="violet">
+    <Header as="h1">{title}</Header>
+    <Header as="h3">
       Calories:
       {calories}
-    </p>
-    <img src={image} alt={title} />
+    </Header>
+    <Image src={image} alt={title} />
+    <Header as="h3">Ingredients</Header>
     <ul>
-      Ingredients:
       {ingredients.map(ingredient => (
         <li key>{ ingredient.text }</li>
       ))}
     </ul>
     <a href={link}>Link to recipe</a>
-  </div>
+  </Card>
 );
 
 Recipe.propTypes = {
