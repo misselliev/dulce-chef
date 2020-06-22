@@ -2,11 +2,13 @@ import React, { useEffect, useState } from 'react';
 import { Card } from 'semantic-ui-react';
 import Recipe from './Recipe';
 
+const API_KEY = process.env.REACT_APP_KEY;
+const CLIENT_ID = process.env.REACT_APP_CLIENT_ID;
 const RecipeBoard = () => {
   const [recipes, setRecipes] = useState([]);
 
   const getRecipes = async () => {
-    const response = await fetch('https://api.edamam.com/search?q=chicken&app_id=e0877f2c&app_key=b32db055141f041f1325da32b330cf4e');
+    const response = await fetch(`https://api.edamam.com/search?q=chicken&app_id=${CLIENT_ID}&app_key=${API_KEY}`);
     const data = await response.json();
     setRecipes(data.hits);
   };
