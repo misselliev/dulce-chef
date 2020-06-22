@@ -17,6 +17,10 @@
   padding: 10px;
 }
 
+.expand {
+  width: 100%;
+}
+
 .search-button {
   background: lightpink;
   border: none;
