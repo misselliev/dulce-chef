@@ -2,12 +2,15 @@ import React from 'react';
 
 const SearchForm = () => (
   <div className="search-form">
-    <input
-      className="search-bar"
-      type="text"
-      placeholder="Type an ingredient"
-      label="Type an ingredient"
-    />
+    <label htmlFor="search-bar">
+      <input
+        id="search-bar"
+        className="search-bar"
+        type="text"
+        placeholder="Type an ingredient"
+        label="Type an ingredient"
+      />
+    </label>
     <button className="search-button" type="submit">Search</button>
   </div>
 );
