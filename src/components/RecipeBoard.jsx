@@ -11,6 +11,7 @@ const RecipeBoard = () => {
     const response = await fetch(`https://api.edamam.com/search?q=chicken&app_id=${CLIENT_ID}&app_key=${API_KEY}`);
     const data = await response.json();
     setRecipes(data.hits);
+    console.log(data.hits)
   };
 
   useEffect(() => {
@@ -22,11 +23,11 @@ const RecipeBoard = () => {
       <Card.Group itemsPerRow={3}>
         {recipes.map(recipe => (
           <Recipe
-            key={recipe.id}
+            key={recipe.recipe.label}
             title={recipe.recipe.label}
             calories={Math.trunc(recipe.recipe.calories)}
             image={recipe.recipe.image}
-            ingredients={recipe.recipe.ingredients}
+            ingredients={recipe.recipe.ingredientLines}
             link={recipe.recipe.shareAs}
           />
         ))}
