@@ -7,7 +7,7 @@ import {
 const Recipe = ({
   title, calories, image, ingredients, link,
 }) => (
-  <Card color="violet">
+  <Card raised color="violet">
     <Header as="h1">{title}</Header>
     <Header as="h3">
       Calories:
