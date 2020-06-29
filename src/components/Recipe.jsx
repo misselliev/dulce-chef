@@ -7,7 +7,7 @@ import {
 const Recipe = ({
   title, calories, image, ingredients, link,
 }) => (
-  <Card color="violet">
+  <Card raised color="violet">
     <Header as="h1">{title}</Header>
     <Header as="h3">
       Calories:
@@ -17,7 +17,7 @@ const Recipe = ({
     <Header as="h3">Ingredients</Header>
     <ul>
       {ingredients.map(ingredient => (
-        <li key>{ ingredient.text }</li>
+        <li key={ingredient}>{ ingredient }</li>
       ))}
     </ul>
     <a href={link}>Link to recipe</a>
@@ -28,7 +28,7 @@ Recipe.propTypes = {
   title: PropTypes.string.isRequired,
   calories: PropTypes.number.isRequired,
   image: PropTypes.string.isRequired,
-  ingredients: PropTypes.arrayOf.isRequired,
+  ingredients: PropTypes.instanceOf(Array).isRequired,
   link: PropTypes.string.isRequired,
 };
 
