@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 import React, { useEffect, useState } from 'react';
-import { Card } from 'semantic-ui-react';
+import { Card, Segment } from 'semantic-ui-react';
 import Recipe from './Recipe';
 
 const API_KEY = process.env.REACT_APP_KEY;
@@ -37,7 +37,7 @@ const RecipeBoard = () => {
         <label htmlFor="search-bar" className="search-bar">
           <input
             id="search-bar"
-            className="search-bar expand"
+            className="search-bar expand shadow"
             type="text"
             placeholder="Type an ingredient"
             label="Type an ingredient"
@@ -45,22 +45,24 @@ const RecipeBoard = () => {
             onChange={updateSearch}
           />
         </label>
-        <button className="search-button" type="submit">Search</button>
+        <button className="search-button shadow" type="submit">Search</button>
       </form>
 
       <div className="ui container top-spacing">
-        <Card.Group itemsPerRow={3}>
-          {recipes.map(recipe => (
-            <Recipe
-              key={recipe.recipe.label}
-              title={recipe.recipe.label}
-              calories={Math.trunc(recipe.recipe.calories)}
-              image={recipe.recipe.image}
-              ingredients={recipe.recipe.ingredientLines}
-              link={recipe.recipe.shareAs}
-            />
-          ))}
-        </Card.Group>
+        <Segment raised>
+          <Card.Group>
+            {recipes.map(recipe => (
+              <Recipe
+                key={recipe.recipe.label}
+                title={recipe.recipe.label}
+                calories={Math.trunc(recipe.recipe.calories)}
+                image={recipe.recipe.image}
+                ingredients={recipe.recipe.ingredientLines}
+                link={recipe.recipe.shareAs}
+              />
+            ))}
+          </Card.Group>
+        </Segment>
       </div>
     </div>
   );

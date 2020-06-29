@@ -7,7 +7,7 @@ import {
 const Recipe = ({
   title, calories, image, ingredients, link,
 }) => (
-  <Card raised color="violet">
+  <Card raised color="green">
     <Header as="h1">{title}</Header>
     <Header as="h3">
       Calories:
@@ -20,7 +20,9 @@ const Recipe = ({
         <li key={ingredient}>{ ingredient }</li>
       ))}
     </ul>
-    <a href={link}>Link to recipe</a>
+    <Card.Content>
+      <a href={link}>Link to recipe</a>
+    </Card.Content>
   </Card>
 );
 
