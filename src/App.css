@@ -88,3 +88,13 @@ ul {
   list-style: none;
   margin-left: -3.5em;
 }
+
+.footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 2em;
+  background: lightyellow;
+  padding-top: 1em;
+  opacity: 0.8;
+  font-weight: bolder;
+}
