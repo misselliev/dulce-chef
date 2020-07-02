@@ -1,6 +1,7 @@
 .App {
   min-height: 100vh;
-  background-image: linear-gradient(rgba(255, 228, 254, 1) 0%, rgba(188, 132, 173, 1) 100%);
+  background: url('./img/brooke-lark-kXQ3J7_2fpc-unsplash.jpg') no-repeat fixed;
+  background-size: cover;
 }
 
 .search-form {
@@ -22,7 +23,7 @@
 }
 
 .search-button {
-  background: lightpink;
+  background: #2ace33;
   border: none;
   padding: 10px 20px;
   color: white;
@@ -38,4 +39,62 @@
 
 .bg-circle {
   width: 5em !important;
+}
+
+.ui.cards {
+  justify-content: space-between;
+}
+
+.ui.raised.segment {
+  padding: 3em;
+  margin-right: -2em;
+  margin-left: -2em;
+  opacity: 0.95;
+}
+
+.ui.green.raised.card {
+  margin-bottom: 3em;
+  padding: 1em 1em 0 1em;
+  text-align: center;
+}
+
+.shadow {
+  box-shadow: 3px 3px 9px darkgray !important;
+}
+
+a {
+  color: #2ace33;
+  font-weight: bolder;
+  text-align: center;
+  margin-bottom: 1em;
+  display: flex;
+  align-self: flex-end;
+  font-size: 1.2em;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  border-top: none !important;
+}
+
+.meta {
+  font-size: 1.2em;
+  color: rgba(50, 55, 51, 0.4);
+  margin-bottom: 1em;
+}
+
+ul {
+  list-style: none;
+  margin-left: -3.5em;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 2em;
+  background: lightyellow;
+  padding-top: 1em;
+  opacity: 0.8;
+  font-weight: bolder;
 }

@@ -7,20 +7,22 @@ import {
 const Recipe = ({
   title, calories, image, ingredients, link,
 }) => (
-  <Card raised color="violet">
+  <Card raised color="green" className="shadow">
     <Header as="h1">{title}</Header>
-    <Header as="h3">
+    <Card.Meta>
       Calories:
       {calories}
-    </Header>
+    </Card.Meta>
     <Image src={image} alt={title} />
-    <Header as="h3">Ingredients</Header>
+    <Card.Header as="h3">Ingredients</Card.Header>
     <ul>
       {ingredients.map(ingredient => (
         <li key={ingredient}>{ ingredient }</li>
       ))}
     </ul>
-    <a href={link}>Link to recipe</a>
+    <Card.Content>
+      <a href={link}>Link to recipe</a>
+    </Card.Content>
   </Card>
 );
 
