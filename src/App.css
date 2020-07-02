@@ -46,7 +46,7 @@
 }
 
 .ui.raised.segment {
-  padding: 3em;
+  padding: 3em 2em 3em 2em;
   margin-right: -2em;
   margin-left: -2em;
   opacity: 0.95;
@@ -97,4 +97,27 @@ ul {
   padding-top: 1em;
   opacity: 0.8;
   font-weight: bolder;
+}
+
+.suggestion {
+  font-weight: bolder;
+  margin: -1.4em 0 1.4em 0;
+  font-style: italic;
+}
+
+/* 679 */
+
+@media (min-width: 680px) {
+  .ui.cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ui.raised.segment {
+    margin: auto;
+  }
+
+  .search-bar {
+    width: 100%;
+  }
 }
