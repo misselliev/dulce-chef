@@ -6,6 +6,7 @@
 
 Web application to help you get out of a cooking rut :fried_egg:. Give our chef Dulce :dog: an ingredient and she'll give you back some ideas to cook a delicious meal. This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+![homepage of Dulce Chef](docs/home.png)
 
 ## 🔨 Tools
 - React
@@ -19,7 +20,7 @@ Web application to help you get out of a cooking rut :fried_egg:. Give our chef 
 
 ## ✨ Live Demo
 
-You can look at it [here]() //to be updated soon!.
+You can look at it [here](https://dulce-chef.netlify.app/).
 
 ## 🚀 Getting Started
 
