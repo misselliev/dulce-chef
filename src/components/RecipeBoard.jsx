@@ -8,7 +8,10 @@ const CLIENT_ID = process.env.REACT_APP_CLIENT_ID;
 const RecipeBoard = () => {
   const [recipes, setRecipes] = useState([]);
   const [search, setSearch] = useState('');
-  const [query, setQuery] = useState('banana');
+  const [query, setQuery] = useState(() => {
+    const Suggested = ['rice', 'chocolate', 'apple', 'banana', 'bacon', 'steak', 'broccoli', 'strawberries', 'cheese'];
+    return Suggested[Math.floor(Math.random() * Suggested.length)];
+  });
 
   const getRecipes = async () => {
     const response = await fetch(`https://api.edamam.com/search?q=${query}&app_id=${CLIENT_ID}&app_key=${API_KEY}`);
@@ -50,6 +53,12 @@ const RecipeBoard = () => {
 
       <div className="ui container top-spacing">
         <Segment raised>
+          <div className="suggestion">
+            How about
+            {' '}
+            {query}
+            ?
+          </div>
           <Card.Group>
             {recipes.map(recipe => (
               <Recipe
